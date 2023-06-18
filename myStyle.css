@@ -6,55 +6,98 @@
 
 
 *{
-    width: 1340px;
     font-family: 'Pretendard';
     font-weight: 400;
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #e8e3c6;
-
+    word-break:break-all;
 }
 
-body{
-    background-color: #172539;
+html{
+	scroll-behavior: smooth;
 }
 
 .textY{
     color: #fad863;
 }
+.textB{
+    color: #172539;
+}
+.textV{
+    font-weight: 700;
+}
+.text0{
+    font-size: 0.8rem;
+    line-height: 1.2;
+}
 .text1{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
 }
 .text2{
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 .text3{
-    font-size: 3rem;
+    font-size: 1.6rem;
     font-weight: 500;
 }
 .text4{
-    font-size: 4.5rem;
+    font-size: 2rem;
     font-weight: 700;
+}
+.text5{
+    font-size: 4rem;
+    font-weight: 500;
 }
 .text6{
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 700;
+}
+.text7{
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.text8{
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1.2;
 }
 .text9{
-    font-size: 9rem;
-    font-weight: 700;
-}
-.text15{
-    font-size: 15rem;
+    font-size: 5rem;
     font-weight: 800;
+    line-height: 1.2;
+}
+.text10{
+    font-size: 13rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.textcenter{
+    text-align: center;
+}
+.textright{
+    text-align: right;
+}
+
+
+.column2{
+    column-count: 2;
+    column-gap: 20px;
+    text-align: justify;
 }
 
 .row{
     display: flex;
     width: 100%;
+}
+.col{
+    display: block;
 }
 
 .col-12{width: 100%;}
@@ -70,7 +113,9 @@ body{
 .col-2{width: 16.66%;}
 .col-1{width: 8.33%;}
 
+.h25{height: 25px;}
 .h50{height: 50px;}
+.h75{height: 75px;}
 .h100{height: 100px;}
 .h150{height: 150px;}
 .h200{height: 200px;}
@@ -85,37 +130,324 @@ body{
     background-color: rgb(184, 216, 137);
 }
 
-#nav{
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    z-index: 2;
+
+body{
     background-color: #172539;
 }
 
+#container{
+    width: 1420px;
+    margin: 0px auto;
+}
+
+#nav{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #172539;
+    margin: 0;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar__menu-box-1 > ul ul {
+    display: none;
+}
 
 .menu li{
+    width: 100%;
+    height: 60px;
     margin: 0;
     text-align: center;
     list-style: none;
+    line-height: 60px;
     transition-property: all;
     transition-timing-function: ease-in-out;
     transition: 1s;
 }
 
-.menu li a{
-    text-decoration: none;
-    font-size: 1.2rem;
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #172539;
+    margin: 0;
 }
+li{
+    list-style: none;
+}
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+:root {
+    --site-width: 1420px;
+}
+.con-min-width {
+    min-width: var(--site-width);
+}
+.top-bar > .con {
+    width: var(--site-width);
+}
+.top-bar__menu-box-1 > ul > li {
+    display: inline-block;
+}
+.top-bar__menu-box-1 {
+    text-align: center;
+}
+.top-bar__menu-box-1 ul {
+    background-color:#172539;
+    color:#e8e3c6;
+}
+.top-bar__menu-box-1 ul > li > a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 10px 50px;
+}
+.top-bar__menu-box-1 ul > li:hover > a {
+    color: #172539;
+    font-weight: 800;
+    background-color:#fad863;
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition: 1s;
+}
+.top-bar__menu-box-1 > ul > li:hover > ul {
+    display: block;
+}
+.top-bar__menu-box-1 > ul > li {
+    position: relative;
+}
+.top-bar__menu-box-1 > ul > li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
 
 .line{
     width: 100%;
     height: 1px;
     background-color: #e8e3c6;
+}
+
+.MainImage{
+    position:absolute;
+    top: 60px;
+    left: 0;
+    z-index: -1;
+}
+
+#Title{
+    text-align: center;
+}
+
+#columline{
+    width: 15px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fad863;
+}
+
+.textbox{
+    height: 350px;
+    margin: 0px 20px;
+    background-color: #f3f1e2;
+    color: #172539;
+    padding: 40px;
+    border-radius: 50px;
+    display: block;
+}
+
+.innertext{
+    width: 240px;
+    height: 310px;
+    color: #172539;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.innertext2{
+    width: 240px;
+    height: 40px;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #172539;
+}
+.page4boxsmall{
+    width: 220px;
+    height: 130px;
+    margin: 280px 20px 0px 100px;
+    text-align: right;
+}
+.page4boxbig{
+    width: 720px;
+    margin: 50px 20px 0px 150px;
+}
+.page5box{
+    margin: 550px 20px 0px 80px;
+    text-align: right;
+}
+
+.titleKor{
+    color: #fad863;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.titleCh{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+}
+.titleEx{
+    margin: 20px 100px 50px 100px;
+    text-align: center;
+}
+
+.starList{
+    display: flex;
+    justify-content:center;
+}
+.starbox{
+    border:3px solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    margin: 0px 20px;
+    padding: 10px;
+    transition-property: background-color;
+    transition-timing-function: linear;
+    transition: 0.5s;
+}
+.starbox:hover{
+    background-color:#e8e3c6;
+}
+
+.Jamiwon1{
+    display: none;
+}
+.Jami1:hover .Jamiwon{
+    display: none;
+}
+.Jami1:hover .Jamiwon1{
+    display: block;
+}
+
+
+.Jami1:hover .static{display: none;}
+.Jami2:hover .static{display: none;}
+.Jami3:hover .static{display: none;}
+.Jami4:hover .static{display: none;}
+.Jami5:hover .static{display: none;}
+.Jami6:hover .static{display: none;}
+.Jami7:hover .static{display: none;}
+.Jami8:hover .static{display: none;}
+
+.taemi1:hover .static{display: none;}
+.taemi2:hover .static{display: none;}
+.taemi3:hover .static{display: none;}
+.taemi4:hover .static{display: none;}
+.taemi5:hover .static{display: none;}
+.taemi6:hover .static{display: none;}
+.taemi7:hover .static{display: none;}
+.taemi8:hover .static{display: none;}
+
+.csi1:hover .static{display: none;}
+.csi2:hover .static{display: none;}
+.csi3:hover .static{display: none;}
+.csi4:hover .static{display: none;}
+.csi5:hover .static{display: none;}
+.csi6:hover .static{display: none;}
+.csi7:hover .static{display: none;}
+.csi8:hover .static{display: none;}
+
+.Jami1:hover .Jami1Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.Jami2:hover .Jami2Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.Jami3:hover .Jami3Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.Jami4:hover .Jami4Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.Jami5:hover .Jami5Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.Jami6:hover .Jami6Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.Jami7:hover .Jami7Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.Jami8:hover .Jami8Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+
+.taemi1:hover .taemi1Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.taemi2:hover .taemi2Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.taemi3:hover .taemi3Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.taemi4:hover .taemi4Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.taemi5:hover .taemi5Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.taemi6:hover .taemi6Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.taemi7:hover .taemi7Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.taemi8:hover .taemi8Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+
+.csi1:hover .csi1Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.csi2:hover .csi2Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.csi3:hover .csi3Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.csi4:hover .csi4Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.csi5:hover .csi5Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.csi6:hover .csi6Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.csi7:hover .csi7Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+.csi8:hover .csi8Ex{visibility:visible; opacity: 100; transition-property : all; transition: opacity 0.3s linear;}
+
+
+.starEx{
+    visibility: hidden;
+    width: 250px;
+    height: 150px;
+    top: -80px;
+    border-radius: 30px;
+    background-color:#e8e3c6;
+    color: #172539;
+    padding: 20px;
+    position:relative;
+    z-index: 1;
+    opacity: 0;
+}
+.starExLeft{
+    left: 120px;
+}
+.starExRight{
+    right: 310px;
+}
+
+.starExtext{
+    color: #172539;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: justify;
+}
+.starname{
+    width: 145px;
+    margin: 10px 10px 0px 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.Image7{
+    margin: auto;
+}
+.star7Ex{
+    width: 580px;
+    margin: auto;
+    text-align: center;
+}
+
+footer{
+    margin: 100px 0px;
+    text-align: center;
 }
 
 
